@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1055436803579",
+    "project_id": "lender-db",
+    "storage_bucket": "lender-db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1055436803579:android:42ca93fe3be56bf73a0f5e",
+        "android_client_info": {
+          "package_name": "com.example.untitled"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1055436803579-tbam9thhqllv1htlcfb8go26vnck7o4f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvmMNYhlp_T4UAcNfM3eun9KQBUGF6rhQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1055436803579-tbam9thhqllv1htlcfb8go26vnck7o4f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

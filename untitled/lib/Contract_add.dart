@@ -1,28 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class Signup extends StatefulWidget {
+class Contract_add extends StatefulWidget {
   @override
-  State createState() => _Signup();
+  State createState() => _Contract_add();
 }
 
-class _Signup extends State {
-  String name = "", id = "", pwd = "", tel = "", bank = "", account = "";
-  final _name = TextEditingController();
-  final _id = TextEditingController();
-  final _pwd = TextEditingController();
-  final _tel = TextEditingController();
-  final _bank = TextEditingController();
-  final _account = TextEditingController();
+class _Contract_add extends State {
+  String debtor = "", creditor = "", amount = "", interest = "", deadline = "", note = "";
+  final _debtor = TextEditingController();
+  final _creditor = TextEditingController();
+  final _amount = TextEditingController();
+  final _interest = TextEditingController();
+  final _deadline = TextEditingController();
+  final _note = TextEditingController();
 
   @override
   void dispose(){
-    _name.dispose();
-    _id.dispose();
-    _pwd.dispose();
-    _tel.dispose();
-    _bank.dispose();
-    _account.dispose();
+    _debtor.dispose();
+    _creditor.dispose();
+    _amount.dispose();
+    _interest.dispose();
+    _deadline.dispose();
+    _note.dispose();
     super.dispose();
   }
 
@@ -64,7 +64,7 @@ class _Signup extends State {
                           margin: EdgeInsets.only(right: 15.w),
                           child: Text(
                             textAlign: TextAlign.center,
-                            '이름',
+                            '채무자',
                             style: TextStyle(
                               fontSize: 18.sp,
                             ),
@@ -74,10 +74,10 @@ class _Signup extends State {
                           width: 180.w,
                           height: 35.h,
                           child: TextField(
-                            controller: _name,
+                            controller: _debtor,
                             decoration: InputDecoration(
                               filled: true,
-                              hintText: 'Name',
+                              hintText: 'debtor',
                             ),
                           ),
                         )
@@ -95,7 +95,7 @@ class _Signup extends State {
                           margin: EdgeInsets.only(right: 15),
                           child: Text(
                             textAlign: TextAlign.center,
-                            'ID',
+                            '채권자',
                             style: TextStyle(
                               fontSize: 18.sp,
                             ),
@@ -105,10 +105,10 @@ class _Signup extends State {
                           width: 180.w,
                           height: 35.h,
                           child: TextField(
-                            controller: _id,
+                            controller: _creditor,
                             decoration: InputDecoration(
                               filled: true,
-                              hintText: 'ID',
+                              hintText: 'creditor',
                             ),
                           ),
                         )
@@ -126,7 +126,7 @@ class _Signup extends State {
                           margin: EdgeInsets.only(right: 15),
                           child: Text(
                             textAlign: TextAlign.center,
-                            'Password',
+                            '금액',
                             style: TextStyle(
                               fontSize: 18.sp,
                             ),
@@ -136,10 +136,10 @@ class _Signup extends State {
                           width: 180.w,
                           height: 35.h,
                           child: TextField(
-                            controller: _pwd,
+                            controller: _amount,
                             decoration: InputDecoration(
                               filled: true,
-                              hintText: 'Password',
+                              hintText: 'amount',
                             ),
                             obscureText: true,
                           ),
@@ -158,7 +158,7 @@ class _Signup extends State {
                           margin: EdgeInsets.only(right: 15),
                           child: Text(
                             textAlign: TextAlign.center,
-                            '전화번호',
+                            '이자',
                             style: TextStyle(
                               fontSize: 18.sp,
                             ),
@@ -168,10 +168,10 @@ class _Signup extends State {
                           width: 180.w,
                           height: 35.h,
                           child: TextField(
-                            controller: _tel,
+                            controller: _interest,
                             decoration: InputDecoration(
                               filled: true,
-                              hintText: 'tel',
+                              hintText: 'interest',
                             ),
                           ),
                         )
@@ -189,7 +189,7 @@ class _Signup extends State {
                           margin: EdgeInsets.only(right: 15),
                           child: Text(
                             textAlign: TextAlign.center,
-                            '은행',
+                            '상환기한',
                             style: TextStyle(
                               fontSize: 18.sp,
                             ),
@@ -199,10 +199,10 @@ class _Signup extends State {
                           width: 180.w,
                           height: 35.h,
                           child: TextField(
-                            controller: _bank,
+                            controller: _deadline,
                             decoration: InputDecoration(
                               filled: true,
-                              hintText: 'bank',
+                              hintText: 'deadline',
                             ),
                           ),
                         )
@@ -220,7 +220,7 @@ class _Signup extends State {
                           margin: EdgeInsets.only(right: 15),
                           child: Text(
                             textAlign: TextAlign.center,
-                            '계좌번호',
+                            '비고',
                             style: TextStyle(
                               fontSize: 18.sp,
                             ),
@@ -230,10 +230,10 @@ class _Signup extends State {
                           width: 180.w,
                           height: 35.h,
                           child: TextField(
-                            controller: _account,
+                            controller: _note,
                             decoration: InputDecoration(
                               filled: true,
-                              hintText: 'account',
+                              hintText: 'note',
                             ),
                           ),
                         )

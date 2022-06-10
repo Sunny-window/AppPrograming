@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'test.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'logged.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -14,6 +15,7 @@ class _Login extends State {
 
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.init(context, designSize: const Size(412, 915));
     return Scaffold(
         body: Container(
             color: Color(0xffDBF5E1),
@@ -22,7 +24,7 @@ class _Login extends State {
                 children: <Widget>[
                   Container(
                       width: double.infinity,
-                      height: 75,
+                      height: 80.h,
                       color: Color(0xff41AA6A),
                       child: Center(
                         child: Text(
@@ -30,13 +32,13 @@ class _Login extends State {
                           'L E N D E R',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 50,
+                            fontSize: 45.sp,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                       )),
                   SizedBox(
-                    height: 270,
+                    height: 270.h,
                   ),
                   Container(
                     margin: EdgeInsets.all(15),
@@ -44,21 +46,21 @@ class _Login extends State {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Container(
-                          width: 130,
-                          height: 30,
+                          width: 130.w,
+                          height: 35.h,
                           margin: EdgeInsets.only(right: 15),
                           child: Text(
                             textAlign: TextAlign.center,
                             'ID',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              fontSize: 25,
+                              fontSize: 25.sp,
                             ),
                           ),
                         ),
                         Container(
-                          width: 220,
-                          height: 36,
+                          width: 220.w,
+                          height: 36.h,
                           child: TextField(
                             controller: _id,
                             decoration: InputDecoration(
@@ -79,21 +81,21 @@ class _Login extends State {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Container(
-                          width: 130,
-                          height: 30,
+                          width: 130.w,
+                          height: 35.h,
                           margin: EdgeInsets.only(right: 15),
                           child: Text(
                             textAlign: TextAlign.center,
                             'Password',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              fontSize: 25,
+                              fontSize: 25.sp,
                             ),
                           ),
                         ),
                         Container(
-                          width: 220,
-                          height: 36,
+                          width: 220.w,
+                          height: 36.h,
                           child: TextField(
                             controller: _pwd,
                             decoration: InputDecoration(
@@ -110,14 +112,14 @@ class _Login extends State {
                     ),
                   ),
                   SizedBox(
-                    height: 25,
+                    height: 50.h,
                   ),
                   Container(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Container(
-                          margin: EdgeInsets.only(right: 15),
+                          margin: EdgeInsets.only(right: 15.w),
                           child: RaisedButton(
                             color: Color(0xff41AA6A),
                             child: Text(
@@ -132,7 +134,7 @@ class _Login extends State {
                           ),
                         ),
                         SizedBox(
-                          width: 55,
+                          width: 55.w,
                         ),
                         Container(
                           child: RaisedButton(
