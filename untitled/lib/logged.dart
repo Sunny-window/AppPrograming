@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/Contract_add.dart';
-import 'main.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'Contract_list.dart';
 
 class Index2 extends StatefulWidget {
   @override
@@ -145,7 +145,7 @@ class _Index2 extends State {
                         onPressed: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => Index2()),
+                            MaterialPageRoute(builder: (context) => Contract_list()),
                           );
                         },
                       ),

@@ -128,7 +128,7 @@ class _Signup extends State {
                             textAlign: TextAlign.center,
                             'Password',
                             style: TextStyle(
-                              fontSize: 18.sp,
+                              fontSize: 17.sp,
                             ),
                           ),
                         ),

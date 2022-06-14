@@ -1,17 +1,70 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'logged.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
+
+class FBlogin extends StatefulWidget {
+  const FBlogin({Key? key}) : super(key: key);
+
+  @override
+  State<FBlogin> createState() => _FBloginState();
+}
+
+class _FBloginState extends State<FBlogin> {
+  Future<FirebaseApp> _initializeFirebase() async {
+    FirebaseApp firebaseApp = await Firebase.initializeApp();
+    return firebaseApp;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: FutureBuilder(
+          future: _initializeFirebase(),
+          builder: (context, snapshot) {
+            if (snapshot.connectionState == ConnectionState.done) {
+              return Login();
+            }
+            return const Center(
+              child: CircularProgressIndicator(),
+            );
+          }),
+    );
+  }
+}
 
 class Login extends StatefulWidget {
+  const Login({Key? key}) : super(key: key);
+
   @override
   State createState() => _Login();
 }
 
-class _Login extends State {
+class _Login extends State<Login> {
   bool idcheck = false;
   bool pwdcheck = false;
   final _id = TextEditingController();
   final _pwd = TextEditingController();
+
+  static Future<User?> loginUisngEmailPassword(
+      {required String email,
+      required String password,
+      required BuildContext context}) async {
+    FirebaseAuth auth = FirebaseAuth.instance;
+    User? user;
+    try {
+      UserCredential userCredential = await auth.signInWithEmailAndPassword(
+          email: email, password: password);
+      user = userCredential.user;
+    } on FirebaseAuthException catch (e) {
+      if (e.code == "user-not-found") {
+        print("No User found for that email");
+      }
+    }
+
+    return user;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -143,13 +196,52 @@ class _Login extends State {
                               '확인',
                               style: TextStyle(color: Colors.white),
                             ),
+                            /*onPressed: () async {
+                              User? user = await loginUisngEmailPassword(
+                                  email: _id.text,
+                                  password: _pwd.text,
+                                  context: context);
+                              if (user != null) {
+                                Navigator.of(context).pushReplacement(
+                                    MaterialPageRoute(
+                                        builder: (context) => Index2()));
+                              } else {
+                                showDialog(
+                                    context: context,
+                                    barrierDismissible: true,
+                                    // 사용자가 다이얼로그 바깥을 터치할 때 닫히게 할 것인가?
+                                    builder: (BuildContext context) {
+                                      return AlertDialog(
+                                        content: SingleChildScrollView(
+                                          child: Text('Check your ID or PWD.'),
+                                        ),
+                                        actions: <Widget>[
+                                          FlatButton(
+                                            child: Text('OK'),
+                                            onPressed: () {
+                                              Navigator.of(context).pop(); // 닫기
+                                            },
+                                          ),
+                                        ],
+                                      );
+                                    }
+                                  );
+                               }
+                            },
+                            */
+
+                            ///*
                             onPressed: () {
                               idcheck = (_id.text == "root");
                               pwdcheck = (_pwd.text == "1234");
                               if (idcheck && pwdcheck) {
                                 print(_id.text);
                                 print(_pwd.text);
-                                Navigator.push(context, MaterialPageRoute(builder: (context) => Index2()),);
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Index2()),
+                                );
                                 //Navigator.pop(context);
                               } else {
                                 print("Check ur id or pwd.");
@@ -175,6 +267,7 @@ class _Login extends State {
                                     });
                               }
                             },
+                            //*/
                           ),
                         )
                       ],
