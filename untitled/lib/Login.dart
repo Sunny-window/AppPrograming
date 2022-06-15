@@ -229,7 +229,7 @@ class _Login extends State<Login> {
                         },
                         //*/
 
-                        /*
+                        /* // 기존에 하드 코딩으로 구현했던 로그인 
                         onPressed: () {
                           idcheck = (_id.text == "root");
                           pwdcheck = (_pwd.text == "1234");
