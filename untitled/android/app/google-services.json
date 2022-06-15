@@ -1,62 +1,33 @@
 {
   "project_info": {
-    "project_number": "898233874653",
-    "project_id": "flutter-login-test-98c25",
-    "storage_bucket": "flutter-login-test-98c25.appspot.com"
+    "project_number": "1033236025014",
+    "project_id": "app-lender",
+    "storage_bucket": "app-lender.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:898233874653:android:cc2a5b6a8cfc87a6408334",
-        "android_client_info": {
-          "package_name": "com.example.firebase_test"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "898233874653-2f5jdpvsvv6l90aop6mbhbi56po4lidf.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAiKwTCGhwmIuh0qa0Py4GsEokEOMjgNqQ"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "898233874653-2f5jdpvsvv6l90aop6mbhbi56po4lidf.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:898233874653:android:93342454e1a1978f408334",
+        "mobilesdk_app_id": "1:1033236025014:android:c2743346868b81b3a12017",
         "android_client_info": {
           "package_name": "com.example.untitled"
         }
       },
       "oauth_client": [
         {
-          "client_id": "898233874653-2f5jdpvsvv6l90aop6mbhbi56po4lidf.apps.googleusercontent.com",
+          "client_id": "1033236025014-a2muorcl2lkgkm1g6fopkjnk7s412nrv.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAiKwTCGhwmIuh0qa0Py4GsEokEOMjgNqQ"
+          "current_key": "AIzaSyAhGKE-p05AugbPOJgkmU88kGTxS8yD7Ug"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "898233874653-2f5jdpvsvv6l90aop6mbhbi56po4lidf.apps.googleusercontent.com",
+              "client_id": "1033236025014-a2muorcl2lkgkm1g6fopkjnk7s412nrv.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

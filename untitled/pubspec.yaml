@@ -32,3 +32,6 @@ flutter:
 
   uses-material-design: true
 
+  assets:
+    - img/borrow.png
+    - img/lend.png

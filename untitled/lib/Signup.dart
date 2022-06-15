@@ -30,9 +30,9 @@ class _Signup extends State {
   Widget build(BuildContext context) {
     ScreenUtil.init(context, designSize: const Size(412, 915));
     return Scaffold(
-        body: Container(
-            color: Color(0xffDBF5E1),
-            child: Center(
+        backgroundColor: Color(0xffDBF5E1),
+        resizeToAvoidBottomInset: false,
+        body:  Center(
               child: Column(
                 children: <Widget>[
                   Container(
@@ -288,6 +288,6 @@ class _Signup extends State {
                   ),
                 ],
               ),
-            )));
+            ));
   }
 }

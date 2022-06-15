@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:untitled/Contract_list.dart';
 
 class Contract_add extends StatefulWidget {
   @override
@@ -30,9 +31,9 @@ class _Contract_add extends State {
   Widget build(BuildContext context) {
     ScreenUtil.init(context, designSize: const Size(412, 915));
     return Scaffold(
-        body: Container(
-            color: Color(0xffDBF5E1),
-            child: Center(
+        backgroundColor: Color(0xffDBF5E1),
+        resizeToAvoidBottomInset: false,
+        body: Center(
               child: Column(
                 children: <Widget>[
                   Container(
@@ -279,7 +280,9 @@ class _Contract_add extends State {
                                 ),
                             ),
                             onPressed: () {
-                              Navigator.pop(context);
+                              Navigator.of(context).pushReplacement(
+                                  MaterialPageRoute(
+                                      builder: (context) => Contract_list()));
                             },
                           ),
                         )
@@ -288,6 +291,6 @@ class _Contract_add extends State {
                   ),
                 ],
               ),
-            )));
+            ));
   }
 }
